@@ -1,0 +1,295 @@
+﻿img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.customer-img {
+    width: 180px; /* רוחב קבוע */
+    height: 160px; /* גובה קבוע */
+    border-radius: 8px; /* פינות מעוגלות (אופציונלי) */
+    display: block; /* מבטיח שהתמונה לא תתנהג כ-inline */
+    margin: 0 auto; /* יישור למרכז (אופציונלי) */
+ 
+}
+
+.card {
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    color: #000000;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    width: 200px; /* רוחב קבוע */
+    min-height: 300px; /* גובה מינימלי קבוע */
+    overflow: hidden; /* מונע גלילה פנימית */
+    display: flex;
+    flex-direction: column; /* סידור תוכן בעמודה */
+    justify-content: center; /* מרכז אנכי */
+    align-items: center; /* מרכז אופקי */
+}
+
+
+
+
+.card.active {
+    background-color: #be9bc6;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+/* עיצוב לכפתור favorite (לב) */
+.favorite-btn {
+    position: absolute;
+    top: 10px; /* מיקום למעלה */
+    left: 10px; /* מיקום בצד שמאל */
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: black; /* צבע לב חלול */
+    z-index: 1; /* לוודא שהכפתור יהיה מעל התוכן */
+}
+
+/* עיצוב לכפתור הקישור לאתר */
+.website-btn {
+    display: none; /* נסתיר את הכפתור בהתחלה */
+    padding: 10px;
+    background-color: #ffffff;
+    color: #356b95;
+    border: #356b95 2px solid;  
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.website-btn:hover {
+    background-color: #c2e4fb; /* צבע כפתור בזמן מעבר עכבר */
+}
+
+/* לב חלול לפני הלחיצה */
+.favorite-btn:before {
+    content: "♡"; /* הלב החלול */
+    font-size: 30px;
+    color: black; /* לב חלול - צבע ברירת מחדל */
+}
+
+.favorite-btn.active:before {
+    content: "♥"; /* הלב המלא */
+}
+
+
+.flex-container-images {
+    display: flex;
+    flex-wrap: wrap; /* מאפשר לשבור שורות אם אין מקום */
+    gap: 20px; /* מרווחים בין כל האלמנטים */
+    justify-content: space-around; /* מפזר את התוכן בצורה שווה */
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.flex-container-images .img-wrapper{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.flex-container-images .img-wrapper p {
+
+    color: #927493;
+    font-size:2em;
+    text-align:center;
+    padding-bottom: 1em;
+    font-weight:bold;
+    flex-direction: row;
+    word-wrap: break-word;
+    align-items:flex-end;
+
+
+}
+
+
+
+header {
+    position: relative; /* Establish a relative positioning context */
+    width: 100%; /* Ensure the header spans full width */
+    height: 100%; /* Adjust height based on image */
+}
+
+header img {
+    
+    width: 100%; /* Make the image responsive */
+    height:140px; /* Maintain aspect ratio */
+    display: block; /* Remove inline spacing issues */
+}
+
+header h1 {
+    position: absolute; /* Position over the image */
+    top: 50%; /* Vertically center */
+    left: 50%; /* Horizontally center */
+    transform: translate(-50%, -50%); /* Adjust for centering */
+    color: #927493; /* Text color */
+    font-size: 3em; /* Adjust font size */
+    text-align: center; /* Center the text */
+    padding: 0.5em 1em; /* Add some padding for readability */
+    margin: 0; 
+} 
+
+.flex-container-subjects {
+    display: flex; /* הופך את הרשימה למכולת flex ליצירת פריסה גמישה. */
+    align-items: center; /* מיישר את הפריטים לאורך הציר האנכי (במרכז). */
+    justify-content: space-around; /* מפזר את הפריטים באופן שווה עם רווחים סביבם. */
+    gap: 20px; /* יוצר רווחים אחידים בין הפריטים. */
+    flex-wrap: wrap; /* מאפשר לפריטים לעבור לשורה חדשה אם אין מקום בשורה הנוכחית. */
+    list-style-type: none; /* מסיר את הנקודות או הסימנים המובנים של הרשימה. */
+    padding: 0; /* מסיר ריווח פנימי מובנה של הרשימה. */
+}
+
+.flex-container-subjects li {
+   
+    background-color: rgb(194, 228, 251); /* מגדיר צבע רקע לפריטים (ריבועים). */
+    width: 70%;
+    height: 20%;
+    border-radius: 10px; /* מעגל מעט את הפינות של הריבועים. */
+    display: flex; /* מאפשר למרכז את תוכן הריבוע באמצעות flexbox. */
+    align-items: center; /* ממרכז את התוכן בתוך הריבוע לאורך הציר האנכי. */
+    justify-content: center; /* ממרכז את התוכן בתוך הריבוע לאורך הציר האופקי. */
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+
+.flex-container-nav {
+    display: flex;
+    width: 50%;
+    height: 80%;
+    justify-content: flex-start; /* כל האלמנטים מוצמדים לתחילת הקונטיינר */
+    align-items:flex-start; /* האלמנטים מיושרים אופקית לימין */
+    gap: 30px;
+    flex-direction: column; /* האלמנטים יהיו אחד מתחת לשני */
+    list-style-type: none; /* הורדת הנקודות מהרשימה */
+    background-color: #be9bc6;
+    padding: 10px;
+    position: fixed;
+    top: 30px; /* Start at the top */
+    left: 0;
+    z-index: 9999;
+
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px; /* Add margin-top to push the search bar down */
+    margin-bottom: 30px; /* Add bottom margin to create space between the search bar and the customer list */
+   
+}
+
+#search-input {
+    width: 50%; /* Increased width of the input field */
+    padding: 8px; /* Increased padding to make the input field bigger */
+    font-size: 0.8rem; /* Increased font size for better readability */
+    border-radius: 5px; /* Rounded corners */
+    border: none;   
+    background-color: #d4d4d4;
+}
+
+
+
+
+.flex-container-nav a{
+    color: white;
+    text-decoration: none;
+
+    font-size: 1.2rem;
+
+
+}
+/* התפריט יוסתר כל עוד המסך קטן */
+.flex-container-nav.hide-mobile {
+    display: none;
+}
+/* הכפתור יוצג כל עוד המסך קטן */
+#nav-button{
+    display:block;
+}
+
+
+
+
+@media only screen and (min-width: 920px) {
+
+    :root {
+        padding: 50px;
+    }
+
+ 
+
+    .search-container {
+        justify-content: left;
+    }
+
+    #search-input {
+        width: 30%; /* Increased width of the input field */
+       
+    }
+
+    .flex-container-nav.hide-mobile {
+        flex-direction: row; /* החל מרוחב מסך 920 פיקסל נרצה שהתפריט יופיע בשורה אחת */
+        display: flex; /* במסכים גדולים מ-920 פיקסל נציג את התפריט */
+        padding: 1rem;
+        background-color: #927493;
+        position: relative;
+        height: unset;
+        width: 100%;
+        top: 0;
+
+    }
+
+ 
+
+    #nav-button {
+        display: none;
+    }
+
+    .flex-container-nav.hide-mobile a {
+        color: white;
+        padding: 2rem;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .flex-container-subjects li {
+      
+        background-color: #c2e4fb; /* מגדיר צבע רקע לפריטים (ריבועים). */
+        width: calc(100% * (1 / 5) - 20px); /* מחשב את הרוחב כך שכל שורה תכיל 5 פריטים (עם רווחים של gap). */
+        font-size:1rem;
+    }
+    header h1 {
+        color: #927493;
+        word-wrap: break-word;
+        font-size:4em;
+        text-align:center;
+        padding: 1em;
+       }
+    header img {
+        max-width: 100%;
+        
+    }
+    
+    
+    }
